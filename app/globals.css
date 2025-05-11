@@ -1,14 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-
+  --color-blueClassic: #009DFF;
+  --color-greenClassic: #00FF66;
+  --color-redClassic: #FF0037;
 }
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
   body {
     @apply h-screen w-screen overflow-x-hidden bg-white;
   }
   h1 {
     @apply text-2xl font-semibold uppercase;
+  }
+}
+
+@layer components {
+  .Classic {
+    @apply bg-gradient-to-t from-blueClassic to-transparent z-10;
+  }
+  .Medium {
+    @apply bg-gradient-to-t from-greenClassic to-transparent z-10;
+  }
+  .Large {
+    @apply bg-gradient-to-t from-redClassic to-transparent z-10;
   }
 }
