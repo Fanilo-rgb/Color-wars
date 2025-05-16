@@ -1,6 +1,6 @@
-import Header from "@/components/header";
-import ToolBar from "@/components/toolBar";
-import Card from "@/components/card";
+import Header from "@/components/Header";
+import ToolBar, {PlayerDetails, Pseudo, Settings} from "@/components/ToolBar";
+import Card from "@/components/Card";
 import Link from "next/link";
 
 const options = [
@@ -11,7 +11,7 @@ const options = [
   },{
     "title": "Medium",
     "size": 6,
-    "scale": "150"
+    "scale": "175"
   },{
     "title": "Large",
     "size": 9,
@@ -24,16 +24,21 @@ export default function Home() {
     <>
       <Header/>
       <div className={"flex-1 flex items-center justify-center gap-5"}>
-        {options.map((option) => {
+        {options.map((option, index) => {
           return (
-            <Link key={option.title} href={`/game?size=${option.size}`}>
-              <Card option={option} />
+            <Link key={option.title} href={`/game?h=${option.size}&w=${option.size}`}>
+              <Card option={option} i={index} />
             </Link>
           )
         })}
       </div>
       <div className={"flex justify-center"}>
-        <ToolBar/>
+        <ToolBar>
+          <Settings/>
+          <PlayerDetails>
+            <Pseudo/>
+          </PlayerDetails>
+        </ToolBar>
       </div>
     </>
   );
