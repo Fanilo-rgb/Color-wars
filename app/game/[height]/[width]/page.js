@@ -1,10 +1,9 @@
 "use client"
 
-import {useSearchParams} from "next/navigation";
 import ToolBar, {PlayerDetails, Pseudo, Score, Settings} from "@/components/ToolBar";
 import Board from "@/components/Board";
 import {DataProvider, useData} from "@/context/DataProvider";
-import { Suspense } from "react"
+import {useParams} from "next/navigation";
 
 const GameContent = ({h, w}) => {
   const { data } = useData()
@@ -30,20 +29,14 @@ const GameContent = ({h, w}) => {
   )
 }
 
-const GameContentWithParams = () => {
-  const searchParams = useSearchParams()
-  const h = parseInt(searchParams.get("h"))
-  const w = parseInt(searchParams.get("w"))
-  return <GameContent h={h} w={w}/>
-}
-
 const Game = () => {
+  const { height, width } = useParams()
+  const h = parseInt(height) || 5
+  const w = parseInt(width) || 5
 
   return (
     <DataProvider>
-      <Suspense>
-        <GameContentWithParams/>
-      </Suspense>
+      <GameContent h={h} w={w}  />
     </DataProvider>
   )
 }

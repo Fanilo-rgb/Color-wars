@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="00107a7b-196c-4b47-81ca-0ef588f30289" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/game/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/game/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(home)/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/game/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/game/[height]/[width]/page.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +61,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Greenworld-1\OneDrive\Bureau\color_wars\app\game\[height]\[width]" />
+      <recent name="C:\Users\Greenworld-1\OneDrive\Bureau\color_wars\app\game\[height]" />
       <recent name="C:\Users\Greenworld-1\OneDrive\Bureau\color_wars\public\images" />
       <recent name="C:\Users\Greenworld-1\OneDrive\Bureau\color_wars\app\(home)" />
     </key>
@@ -87,7 +90,7 @@
       <workItem from="1747029089946" duration="48458000" />
       <workItem from="1747113122051" duration="5754000" />
       <workItem from="1747219200122" duration="5955000" />
-      <workItem from="1747290396715" duration="13511000" />
+      <workItem from="1747290396715" duration="14685000" />
     </task>
     <servers />
   </component>

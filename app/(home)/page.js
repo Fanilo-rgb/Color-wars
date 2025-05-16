@@ -26,7 +26,7 @@ export default function Home() {
       <div className={"flex-1 flex items-center justify-center gap-5"}>
         {options.map((option, index) => {
           return (
-            <Link key={option.title} href={`/game?h=${option.size}&w=${option.size}`}>
+            <Link key={option.title} href={`/game/${option.size}/${option.size}`}>
               <Card option={option} i={index} />
             </Link>
           )

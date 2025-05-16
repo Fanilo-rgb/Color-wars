@@ -150,27 +150,33 @@ const Board = ({ height, width }) => {
     <>
       <div
         className={`
-          grid grid-rows-${height} rounded-4xl aspect-square w-full max-w-2xl
-          ${height === 9 ? "gap-1.5" : "gap-2"}
-        `}
+    grid rounded-4xl aspect-square w-full max-w-2xl
+    ${height === 9 ? "gap-1.5" : "gap-2"}
+  `}
+        style={{ gridTemplateRows: `repeat(${height}, 1fr)` }}
       >
         {squares.map((rows, i) => (
           <div
             key={i}
-            className={`
-              grid grid-cols-${width}
-              ${width === 9 ? "gap-1.5" : "gap-2"}
-            `}
+            className={`grid ${width === 9 ? "gap-1.5" : "gap-2"}`}
+            style={{ gridTemplateColumns: `repeat(${width}, 1fr)` }}
           >
             {rows.map((_, j) => {
               const delay = i + j
-              return(
-                <Cell key={j} size={ height } value={squares[i][j]} delay={delay} onSquareClick={() => handleClick(i, j)} />
-              )
+              return (
+                <Cell
+                  key={j}
+                  size={height}
+                  value={squares[i][j]}
+                  delay={delay}
+                  onSquareClick={() => handleClick(i, j)}
+                />
+              );
             })}
           </div>
         ))}
       </div>
+
       {winner && <GameOverModal winner={winner} onClose={handleClose} />}
     </>
   );
