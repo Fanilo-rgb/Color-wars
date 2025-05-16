@@ -1,11 +1,21 @@
 "use client"
 
-import {useSearchParams} from "next/navigation";
-import ToolBar, {PlayerDetails, Pseudo, Score, Settings} from "@/components/ToolBar";
+import { useSearchParams } from "next/navigation";
+import ToolBar, { PlayerDetails, Pseudo, Score, Settings } from "@/components/ToolBar";
 import Board from "@/components/Board";
-import {DataProvider, useData} from "@/context/DataProvider";
+import { DataProvider, useData } from "@/context/DataProvider";
+import { Suspense } from "react";
 
-const GameContent = ({h, w}) => {
+// Déplacer l'accès aux searchParams ici
+const GameContentWithParams = () => {
+  const searchParams = useSearchParams()
+  const h = parseInt(searchParams.get("h") || "10")  // valeur par défaut si null
+  const w = parseInt(searchParams.get("w") || "10")
+
+  return <GameContent h={h} w={w} />
+}
+
+const GameContent = ({ h, w }) => {
   const { data } = useData()
 
   return (
@@ -15,30 +25,28 @@ const GameContent = ({h, w}) => {
 
       <div className="relative z-10 w-full flex flex-col items-center gap-2">
         <ToolBar>
-          <Settings/>
+          <Settings />
           <PlayerDetails>
-            <Pseudo/>
-            <Score/>
+            <Pseudo />
+            <Score />
           </PlayerDetails>
         </ToolBar>
         <div className="grid place-items-center h-full w-xl p-10">
-          <Board height={h} width={w}/>
+          <Board height={h} width={w} />
         </div>
       </div>
     </div>
   )
 }
 
-
 const Game = () => {
-  const searchParams = useSearchParams()
-  const h = parseInt(searchParams.get("h"))
-  const w = parseInt(searchParams.get("w"))
-
   return (
     <DataProvider>
-      <GameContent h={h} w={w}/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <GameContentWithParams />
+      </Suspense>
     </DataProvider>
   )
 }
+
 export default Game
