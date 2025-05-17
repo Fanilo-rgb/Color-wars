@@ -13,7 +13,7 @@ const GameContent = ({h, w}) => {
       <div className={`absolute inset-0 transition-opacity duration-300 bg-radial from-purple-400 to-purple-100 z-0 ${data.player ? "opacity-0" : "opacity-100"}`}></div>
       <div className={`absolute inset-0 transition-opacity duration-300 bg-radial from-pink-400 to-pink-100 z-0 ${data.player ? "opacity-100" : "opacity-0"}`}></div>
 
-      <div className="relative z-10 h-full w-full flex flex-col items-center gap-2">
+      <div className="relative z-10 h-full w-full flex flex-col items-center gap-2 overflow-hidden">
         <ToolBar>
           <Settings/>
           <PlayerDetails>
@@ -21,7 +21,7 @@ const GameContent = ({h, w}) => {
             <Score/>
           </PlayerDetails>
         </ToolBar>
-        <div className="grid place-items-center h-full w-md p-10">
+        <div className="grid place-items-center h-full w-full sm:w-xl p-10">
           <Board height={h} width={w}/>
         </div>
       </div>

@@ -31,8 +31,8 @@ const GameOverModal = ({ winner, onClose }) => {
                   ${ winner === "O" && " to-blue-300/70" }
                 `}
               >
-                { winner === "X" && <h2 className="text-2xl font-bold mb-4">Félicitation !!! Vous avez gagné 😊</h2> }
-                { winner === "O" && <h2 className="text-2xl font-bold mb-4">Ohhh! Vous avez perdu 🥺</h2> }
+                { winner === "X" && <h2 className="text-2xl font-bold mb-4">Rose à gagner 🔥</h2> }
+                { winner === "O" && <h2 className="text-2xl font-bold mb-4">Violet à gagner 🔥</h2> }
               </motion.div>
             </motion.div>
           ) : null}

@@ -131,25 +131,25 @@ const Mouse = () => {
       <motion.div
         variants={variants}
         animate={cursorVariant}
-        className={"z-50 sm:bg-black sm:border h-2 w-2 rounded-full fixed top-0 left-0 pointer-events-none"}
+        className={"z-50 md:bg-black md:border h-2 w-2 rounded-full fixed top-0 left-0 pointer-events-none"}
       />
       <motion.div
         variants={ring1}
         animate={cursorVariant}
         transition={{ type: "spring", mass: 0.2, dumping: 50, stiffness: 150 }}
-        className={"z-50 bg-transparent sm:border border-black/80 h-4 w-4 rounded-full fixed top-0 left-0 pointer-events-none"}
+        className={"z-50 bg-transparent md:border border-black/80 h-4 w-4 rounded-full fixed top-0 left-0 pointer-events-none"}
       />
       <motion.div
         variants={ring2}
         animate={cursorVariant}
         transition={{ type: "spring", mass: 0.2, dumping: 50, stiffness: 100 }}
-        className={"z-50 bg-transparent sm:border border-black/80 h-6 w-6 rounded-full fixed top-0 left-0 pointer-events-none"}
+        className={"z-50 bg-transparent md:border border-black/80 h-6 w-6 rounded-full fixed top-0 left-0 pointer-events-none"}
       />
       <motion.div
         variants={ring3}
         animate={cursorVariant}
         transition={{ type: "spring", mass: 0.2, dumping: 50, stiffness: 70 }}
-        className={"z-50 bg-transparent sm:border border-black/80 h-8 w-8 rounded-full fixed top-0 left-0 pointer-events-none"}
+        className={"z-50 bg-transparent md:border border-black/80 h-8 w-8 rounded-full fixed top-0 left-0 pointer-events-none"}
       />
     </>
   )

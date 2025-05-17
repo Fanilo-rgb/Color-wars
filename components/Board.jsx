@@ -35,8 +35,7 @@ const Board = ({ height, width }) => {
     return !!playerFound;
   }
 
-  const checkScore = (grid) => {
-    let player = "X"
+  const checkScore = (grid, player) => {
     let score = 0
 
     for (const row of grid) {
@@ -138,7 +137,7 @@ const Board = ({ height, width }) => {
       return;
     }
     // 🔁 Changer de joueur
-    setData({ ...data, player: !xIsNext, score: checkScore(nextSquares) })
+    setData({ ...data, player: !xIsNext, scoreX: checkScore(nextSquares, "X"), scoreO: checkScore(nextSquares, "O") });
     setXIsNext(!xIsNext);
   };
 

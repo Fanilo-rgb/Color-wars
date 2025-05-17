@@ -34,7 +34,7 @@ export const Dots = ({value, size}) => {
         flex gap-1 items-center justify-center
         ${size >= 9 && "scale-50 "}
         ${size === 6 && "scale-90 p-2 flex-wrap"}
-        ${size === 5 && "p-2 flex-wrap"}
+        ${size === 5 && "p-3 sm:p-5 flex-wrap"}
       `}
     >
       {Array(value).fill(1).map((_, index) => (

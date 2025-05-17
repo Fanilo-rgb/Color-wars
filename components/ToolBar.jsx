@@ -43,7 +43,9 @@ export const Score = () => {
   const { data } = useData();
 
   return (
-    <motion.div className={"h-12 w-30 flex items-center justify-center rounded-full"}>{data.score}</motion.div>
+    <motion.div className={"h-12 w-30 flex items-center justify-center rounded-full"}>
+      <span className={"text-pink-400"}>{data.scoreX}</span>/<span className={"text-violet-500"}>{data.scoreO}</span>
+    </motion.div>
   )
 }
 

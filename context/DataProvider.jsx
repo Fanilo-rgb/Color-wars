@@ -7,7 +7,8 @@ const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState({
     player: true,
-    score: 0,
+    scoreX: 0,
+    scoreO: 0,
   });
 
   return (
