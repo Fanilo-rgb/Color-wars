@@ -8,8 +8,8 @@ const Cell = ({ value, size, delay, onSquareClick }) => {
       onClick={onSquareClick}
       className={`
         aspect-square transition-all duration-400 overflow-hidden
-        ${ size >= 9 && "rounded-2xl" }
-        ${ size === 6 && "rounded-3xl" }
+        ${ size >= 9 && "rounded-xl" }
+        ${ size === 6 && "rounded-2xl" }
         ${ size === 5 && "rounded-3xl" }
         ${value
         ? `shadow-md ${value?.type === "X" ? "bg-pink-400" : "bg-purple-600"}`
@@ -31,16 +31,16 @@ export const Dots = ({value, size}) => {
   return (
     <div
       className={`
-        flex gap-2 flex-wrap items-center justify-center
-        ${size >= 9 && "scale-50 p-0"}
-        ${size === 6 && "scale-90 p-3"}
-        ${size === 5 && "p-5"}
+        flex gap-1 items-center justify-center
+        ${size >= 9 && "scale-50 "}
+        ${size === 6 && "scale-90 p-2 flex-wrap"}
+        ${size === 5 && "p-2 flex-wrap"}
       `}
     >
       {Array(value).fill(1).map((_, index) => (
         <motion.span
           key={index}
-          className={"bg-white w-4 h-4 rounded-full"}
+          className={"bg-white w-2 h-2 rounded-full"}
           initial={{ opacity: 0, width: 0, height: 0 }}
           animate={{ opacity: 1, width: 16, height: 16 }}
           transition={{ type: "spring", duration: 0.3 }}

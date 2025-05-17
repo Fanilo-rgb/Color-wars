@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased`}
+        className={`${poppins.className} antialiased h-screen`}
       >
         {children}
         <Mouse/>

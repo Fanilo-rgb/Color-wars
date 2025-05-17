@@ -7,10 +7,6 @@
   --color-pink-400: #FF437E;
 }
 
-* {
-  cursor: none;
-}
-
 @layer base {
   * {
     box-sizing: border-box;
