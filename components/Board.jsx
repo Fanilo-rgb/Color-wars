@@ -150,9 +150,9 @@ const Board = ({ height, width }) => {
     <>
       <div
         className={`
-    grid rounded-4xl aspect-square w-full max-w-2xl
-    ${height === 9 ? "gap-1.5" : "gap-2"}
-  `}
+        grid rounded-4xl aspect-square w-full max-w-xl
+        ${height === 9 ? "gap-1.5" : "gap-2"}
+      `}
         style={{ gridTemplateRows: `repeat(${height}, 1fr)` }}
       >
         {squares.map((rows, i) => (

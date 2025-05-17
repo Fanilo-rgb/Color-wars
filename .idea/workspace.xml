@@ -7,7 +7,11 @@
     <list default="true" id="00107a7b-196c-4b47-81ca-0ef588f30289" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(home)/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/game/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/game/[height]/[width]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/game/[height]/[width]/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/game/[height]/[width]/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Board.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Board.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Cell.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Cell.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ToolBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ToolBar.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +94,8 @@
       <workItem from="1747029089946" duration="48458000" />
       <workItem from="1747113122051" duration="5754000" />
       <workItem from="1747219200122" duration="5955000" />
-      <workItem from="1747290396715" duration="14685000" />
+      <workItem from="1747290396715" duration="15576000" />
+      <workItem from="1747478416342" duration="968000" />
     </task>
     <servers />
   </component>

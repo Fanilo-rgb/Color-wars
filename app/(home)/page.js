@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <Header/>
-      <div className={"flex-1 flex items-center justify-center gap-5"}>
+      <div className={"flex-1 flex items-center justify-center flex-col gap-2"}>
         {options.map((option, index) => {
           return (
             <Link key={option.title} href={`/game/${option.size}/${option.size}`}>

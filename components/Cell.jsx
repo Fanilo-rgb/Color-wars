@@ -10,7 +10,7 @@ const Cell = ({ value, size, delay, onSquareClick }) => {
         aspect-square transition-all duration-400 overflow-hidden
         ${ size >= 9 && "rounded-2xl" }
         ${ size === 6 && "rounded-3xl" }
-        ${ size === 5 && "rounded-4xl" }
+        ${ size === 5 && "rounded-3xl" }
         ${value
         ? `shadow-md ${value?.type === "X" ? "bg-pink-400" : "bg-purple-600"}`
         : "bg-white/60 inset-shadow-sm inset-shadow-black/30"}

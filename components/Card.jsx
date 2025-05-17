@@ -16,7 +16,7 @@ const Card = ({ option, i }) => {
         scale: { type: "spring" }, visualDuration: 0.4, bounce: 0.5,
       }}
       whileHover={{ scale: 1.05, rotate: 5, transition: { duration: .2 }}}
-      className={"relative bg-white h-52 w-52 rounded-4xl shadow-lg overflow-hidden"}
+      className={"relative bg-white h-42 w-42 rounded-4xl shadow-lg overflow-hidden"}
     >
       <div className={`${title} absolute w-full h-full text-gray-900`}>
         <div className={"absolute bottom-5 left-5"}>
