@@ -1,7 +1,6 @@
 "use client"
 import { AnimatePresence, motion } from "motion/react"
 import {useState} from "react";
-import { useRouter } from "next/navigation";
 
 const GameOverModal = ({ winner, onClose }) => {
   const [isVisible, setIsVisible] = useState(true)

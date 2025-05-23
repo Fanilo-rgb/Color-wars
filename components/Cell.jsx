@@ -31,18 +31,18 @@ export const Dots = ({value, size}) => {
   return (
     <div
       className={`
-        flex gap-1 items-center justify-center
+        flex gap-1 md:gap-2 items-center justify-center
         ${size >= 9 && "scale-50 "}
         ${size === 6 && "scale-90 p-2 flex-wrap"}
-        ${size === 5 && "p-3 sm:p-5 flex-wrap"}
+        ${size === 5 && "scale-90 p-2 sm:p-5 sm:scale-100 flex-wrap"}
       `}
     >
       {Array(value).fill(1).map((_, index) => (
         <motion.span
           key={index}
-          className={"bg-white w-2 h-2 rounded-full"}
+          className={"bg-white w-2 h-2 rounded-full p-2"}
           initial={{ opacity: 0, width: 0, height: 0 }}
-          animate={{ opacity: 1, width: 16, height: 16 }}
+          animate={{ opacity: 1, width: 12, height: 12 }}
           transition={{ type: "spring", duration: 0.3 }}
         />
       ))}
